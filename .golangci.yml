@@ -1,0 +1,27 @@
+run:
+  timeout: 5m
+  tests: true
+  modules-download-mode: readonly
+
+linters:
+  disable-all: true
+  enable:
+    - govet
+    - staticcheck
+    - errcheck
+    - gocyclo
+    - ineffassign
+    - unused
+    - misspell
+    - goconst
+    - gofmt
+    - revive
+
+linters-settings:
+  gocyclo:
+    min-complexity: 15
+  goconst:
+    min-len: 2
+    min-occurrences: 3
+  revive:
+    severity: warning
