@@ -6,16 +6,6 @@ Welcome to the RDBMS project. This repository contains a fully functional, in-me
 
 The system follows a classic layered architecture, separating the query language processing from the underlying storage engine.
 
-```mermaid
-graph TD
-    Client[Client (CLI/Web)] --> Lexer
-    Lexer -->|Tokens| Parser
-    Parser -->|AST| Executor
-    Executor -->|R/W| Storage[Storage Engine]
-    Storage -->|Data| BTree[B-Tree Index]
-    Storage -->|Data| Table[Row Storage]
-```
-
 ### 1. Storage Engine (internal/storage)
 The bedrock of the system. It handles data persistence (in-memory), schema enforcement, and low-level data structures.
 - Tables: Row-oriented storage protected by RWMutexes for concurrent access safety.
