@@ -4,7 +4,7 @@ echo "=== RDBMS Quick Start Demo ==="
 echo ""
 echo "1. Building binaries..."
 make build > /dev/null 2>&1
-echo "   ✓ Built CLI and web app"
+echo "   Built CLI and web app"
 echo ""
 echo "2. Testing CLI with SQL..."
 ./bin/rdbms << 'EOF' 2>&1 | head -20
